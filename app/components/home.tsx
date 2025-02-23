@@ -8,7 +8,7 @@ import Link from "next/link";
 const Home = () => {
     return (
         <div className={`flex justify-center items-center`}>
-            <div className="p-5 md:w-9/12">
+            <div className="px-5 md:w-9/12">
                 {/* Title Section */}
                 <article>
                     <h1 data-text="I'm Shaggy Belco Sambo" className={`${styles.introText} sm:my-2 md:my-5`}>

@@ -30,6 +30,12 @@ const Navbar = () => {
                             className={`absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-3 transition-all ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
                             onMouseLeave={() => setMenuOpen(false)}
                         >
+                            {pathname !== "/" && (
+                                <li>
+                                    <Link href="/" className={styles.navItem}>Home</Link>
+                                </li>
+                            )}
+                            
                             {pathname !== "/about" && (
                                 <li className="py-2 px-3 hover:bg-gray-100 rounded">
                                     <Link href="/about">About</Link>
@@ -45,6 +51,12 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex space-x-6">
+                        {pathname !== "/" && (
+                            <li>
+                                <Link href="/" className={styles.navItem}>Home</Link>
+                            </li>
+                        )}
+                        
                         {pathname !== "/about" && (
                             <li>
                                 <Link href="/about" className={styles.navItem}>About</Link>
