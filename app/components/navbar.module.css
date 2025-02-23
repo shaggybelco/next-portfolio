@@ -1,0 +1,38 @@
+﻿.header {
+    padding: 40px 0;
+    transition: 0.5s;
+}
+
+.nav {
+    height: 70px;
+}
+
+.navItem {
+    padding: 10px;
+    color: var(--article-color);
+    position: relative;
+}
+
+.navItem::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 2px;
+    background: var(--article-color);
+    height: 1.5px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.navItem:hover::after {
+    left: 0;
+    right: 0;
+}
+
+.logoStyle {
+    font-family: "Rubik Bubbles", sans-serif;
+    font-size: 2rem;
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: white;
+    --foreground: black;
+    --color: blue;
+    --article-color: grey;
+}
+
+.dark {
+    --background: black;
+    --foreground: white;
+    --color: red;
+    --article-color: grey;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--article-color);
+}
+
+body {
+    /*@apply bg-[var(--background)] text-[var(--color)];*/
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    background: var(--background) !important;
+    transition: color;
+    transition-duration: 0.5s;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
