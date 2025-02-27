@@ -1,12 +1,13 @@
 ﻿'use client'
+
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { Sun, Moon, Monitor } from 'lucide-react'
 
 const ThemeSwitch = () => {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
 
-    // useEffect only runs on the client, so now we can safely show the UI
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -16,11 +17,14 @@ const ThemeSwitch = () => {
     }
 
     return (
-        <select value={theme} onChange={e => setTheme(e.target.value)}>
-            <option value="system">System</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-        </select>
+        <button
+            onClick={() => {
+                setTheme(theme === 'dark' ? 'light' : 'dark')
+            }}
+            className="p-2 rounded-md bg-transparent dark:bg-transparent"
+        >
+            {theme === 'dark' ? <Sun size={20} /> : theme === 'light' ? <Moon size={20} /> : <Monitor size={20} />}
+        </button>
     )
 }
 

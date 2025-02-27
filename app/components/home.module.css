@@ -36,7 +36,7 @@
 
 .introText::after {
     left: -2px;
-    text-shadow: rgb(255, 246, 137) 3px 0;
+    text-shadow: rgb(255, 46, 0) 3px 0;
     animation: 2s linear 0s infinite alternate-reverse none running noise-anim;
 }
 
@@ -88,25 +88,6 @@
     padding: 0px;
     background: none 0px 80% / 100% 0.3em no-repeat;
     position: relative;
-}
-
-
-@keyframes glitch-effect {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(2px);
-    }
-    50% {
-        transform: translateX(-2px);
-    }
-    75% {
-        transform: translateX(1px);
-    }
-    100% {
-        transform: translateX(0);
-    }
 }
 
 @keyframes noise-anim {
